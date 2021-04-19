@@ -1,0 +1,7 @@
+List of components to create in cad:
+
+- top and bottom sheet (view dimensions in reader)
+- both side sheets
+- longitudinal stiffeners
+- ribs
+- vertical stiffeners
