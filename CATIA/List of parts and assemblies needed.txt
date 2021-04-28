@@ -1,7 +1,8 @@
 List of components to create in cad:
 
-- top and bottom sheet (view dimensions in reader)
-- both side sheets
-- longitudinal stiffeners
-- ribs
 - vertical stiffeners
+- Ribs just behind the vertical stiffeners
+- when stringer positioning is given, add them to the assembly + cut-outs in the rib
+- addition of the sleeve (connection of the 2 wingboxes) in the assembly
+- Do the second wingbox with the different layout of rib and vert. stiffeners (see picture on group chat).
+- rivet holes in every part (don't forget the ribs).
