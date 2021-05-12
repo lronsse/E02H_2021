@@ -9,3 +9,9 @@ WB_1 C5 = done
 WB_1 C6 = done
 WB_1 Sheet C1 = done
 WB_1 Sheet C2 = done
+WB_1 Sheet B = done
+WB_1 Vertical Stiffener D = done
+
+
+
+
