@@ -11,6 +11,8 @@ WB_1 Sheet C1 = done - check
 WB_1 Sheet C2 = done - check
 WB_1 Sheet B = done - 
 WB_1 Vertical Stiffener D = done - 
+WB_2 Sheet A  = done - checked 1x
+WB_2 Sheet C1 = done - checked 1x
 
 
 
