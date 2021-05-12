@@ -4,3 +4,5 @@ WB_1 C3 = done
 WB_1 C4 = done
 WB_1 B2 = done
 WB_1 B1 = done
+WB_1 B3 = done
+WB_1 C5 = done
