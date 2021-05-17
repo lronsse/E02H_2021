@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
-data = df[["LOADCELL", "displacement 1", "displacement 2"]]
+loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
+data = loaddis[["LOADCELL", "displacement 1", "displacement 2"]]
 print(data)
 
 xdata1 = data["displacement 1"]
