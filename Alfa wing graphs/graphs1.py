@@ -1,4 +1,4 @@
 import pandas as pd
 
-df = pd.read_excel(r'Alpha Data set.xlsx', sheet_name='your Excel sheet name')
+df = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 print(df)
