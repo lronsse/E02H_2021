@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 outboard = pd.read_excel(r'dataset.xlsx', sheet_name='OUTBOARD')
 loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 outboard = outboard[outboard.columns[:11]]
-outboard = outboard[:50]
+outboard = outboard[:49]
 # print(outboard)
 
 load = -loaddis["LOADCELL"]

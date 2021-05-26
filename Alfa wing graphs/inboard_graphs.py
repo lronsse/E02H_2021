@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 inboard = pd.read_excel(r'dataset.xlsx', sheet_name='INBOARD')
 loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 inboard = inboard[inboard.columns[:11]]
-inboard = inboard[:50]
+inboard = inboard[:49]
 # print(inboard)
 
 load = -loaddis["LOADCELL"]
-
+print(load)
 topgauges = inboard[inboard.columns[1::2]]
 bottomgauges = inboard[inboard.columns[::2]]
 print(topgauges)
