@@ -7,7 +7,7 @@ pd.set_option('display.max_colwidth', None)
 
 zlevels = [50, -0.5, 50]
 # stringer holes
-nstringers = 6
+nstringers = 3
 rivet_spacing1 = 50
 top_spacing = 10.8
 side_spacing = 50
