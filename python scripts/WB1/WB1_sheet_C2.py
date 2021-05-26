@@ -25,7 +25,7 @@ for i in range(nstringers):
             zcords.append(k)
 
 # rib holes
-rivetsperrow2 = 10
+rivetsperrow2 = 6
 top_spacing = 33.64
 rowys = [230.0, 420.0, 730.0, 1020.0]
 spacing = 0.0
