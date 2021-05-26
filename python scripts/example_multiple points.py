@@ -5,6 +5,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', None)
 
+zlevels = [50, -0.5, 50]
 # stringer holes
 nstringers = 6
 rivet_spacing1 = 50
@@ -14,12 +15,14 @@ rowspacing = 75.68
 
 rivetsperrow1 = [29, 29, 28, 27, 26, 24]
 
-xcords, ycords = [], []
+xcords, ycords, zcords = [], [], []
 
 for i in range(nstringers):
     for j in range(rivetsperrow1[i]):
-        ycords.append(float(side_spacing+j*rivet_spacing1))
-        xcords.append(top_spacing+i*75.68)
+        for k in zlevels:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(top_spacing+i*75.68)
+            zcords.append(k)
 
 # rib holes
 rivetsperrow2 = 10
@@ -29,21 +32,26 @@ spacing = 0.0
 for i in range(4):
     spacing = 0
     for j in range(rivetsperrow2):
-        ycords.append(rowys[i])
-        if j == 0:
-            spacing += top_spacing
-        elif j % 2 != 0:
-            spacing += 30
-        elif j % 2 == 0:
-            spacing += 45.7
-        xcords.append(spacing)
+        for k in zlevels:
+            ycords.append(rowys[i])
+            if j == 0:
+                spacing += top_spacing
+            elif j % 2 != 0:
+                spacing += 30
+            elif j % 2 == 0:
+                spacing += 45.7
+            xcords.append(spacing)
+            zcords.append(k)
 
 
 xcords = [-round(entry, 2) for entry in xcords]
 ycords = [round(entry, 2) for entry in ycords]
+zcords = [round(entry, 2) for entry in zcords]
 
 # printing and csv output
-data = {"xcords": xcords, "ycords": ycords}
+data = {"xcords": xcords, "ycords": ycords, "zcords": zcords}
 frame = pd.DataFrame(data)
-frame["zcords"] = 0.8
-frame.to_csv("test.csv", header=False, index=False)
+frame["i"] = 0
+frame["j"] = 0
+frame["k"] = -1
+frame.to_csv("test_multiple_points.csv", header=False, index=False)
