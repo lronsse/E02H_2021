@@ -1,5 +1,10 @@
 import pandas as pd
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
 
+# stringer holes
 nstringers = 6
 rivet_spacing1 = 50
 top_spacing = 10.8
@@ -10,11 +15,10 @@ rivetsperrow1 = [29, 29, 28, 27, 26, 24]
 
 xcords, ycords = [], []
 
-# stringer holes
 for i in range(nstringers):
     for j in range(rivetsperrow1[i]):
         ycords.append(float(side_spacing+j*rivet_spacing1))
-        xcords.append(round(top_spacing+i*75.68, 4))
+        xcords.append(top_spacing+i*75.68)
 
 # rib holes
 rivetsperrow2 = 10
@@ -23,7 +27,7 @@ rowys = [230.0, 420.0, 730.0, 1020.0]
 spacing = 0.0
 for i in range(3):
     for j in range(rivetsperrow2):
-        ycords.append(round(230.0+rowys[i], 4))
+        ycords.append(230.0+rowys[i])
         if j % 2 == 0:
             spacing += top_spacing+j*30
         else:
@@ -31,9 +35,12 @@ for i in range(3):
         xcords.append(spacing)
 
 
+xcords = [-round(entry, 2) for entry in xcords]
+ycords = [round(entry, 2) for entry in ycords]
+
+# printing and csv output
 data = {"xcords": xcords, "ycords": ycords}
 frame = pd.DataFrame(data)
+frame["zcords"] = 0.8
 frame.to_csv("C1.csv", header=False, index=False)
-print(frame)
-frame.set_option("display.max.columns", None)
-frame.head()
+frame
