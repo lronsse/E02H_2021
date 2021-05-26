@@ -54,4 +54,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("test_multiple_points.csv", header=False, index=False)
+frame.to_csv("WB1_sheet_C1.csv", header=False, index=False)
