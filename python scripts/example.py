@@ -26,7 +26,7 @@ rivetsperrow2 = 10
 top_spacing = 33.64
 rowys = [230.0, 420.0, 730.0, 1020.0]
 spacing = 0.0
-for i in range(3):
+for i in range(4):
     spacing = 0
     for j in range(rivetsperrow2+1):
         ycords.append(rowys[i])
