@@ -30,17 +30,17 @@ top_spacing = 33.64
 rowys = [230.0, 420.0, 730.0, 1020.0]
 spacing = 0.0
 for i in range(4):
-    spacing = 0
+    spacing = 0.0
     for j in range(rivetsperrow2):
+        if j == 0:
+            spacing += top_spacing
+        elif j % 2 != 0:
+            spacing += 30
+        elif j % 2 == 0:
+            spacing += 45.7
         for k in zlevels:
-            ycords.append(rowys[i])
-            if j == 0:
-                spacing += top_spacing
-            elif j % 2 != 0:
-                spacing += 30
-            elif j % 2 == 0:
-                spacing += 45.7
             xcords.append(spacing)
+            ycords.append(rowys[i])
             zcords.append(k)
 
 
