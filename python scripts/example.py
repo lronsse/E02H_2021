@@ -1,4 +1,5 @@
 import pandas as pd
+
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
@@ -42,5 +43,4 @@ ycords = [round(entry, 2) for entry in ycords]
 data = {"xcords": xcords, "ycords": ycords}
 frame = pd.DataFrame(data)
 frame["zcords"] = 0.8
-frame.to_csv("C1.csv", header=False, index=False)
-frame
+frame.to_csv("test.csv", header=False, index=False)
