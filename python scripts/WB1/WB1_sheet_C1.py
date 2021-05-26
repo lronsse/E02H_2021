@@ -21,7 +21,7 @@ for i in range(nstringers):
     for j in range(rivetsperrow1[i]):
         for k in zlevels:
             ycords.append(float(side_spacing+j*rivet_spacing1))
-            xcords.append(top_spacing+i*75.68)
+            xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
 
 # rib holes
