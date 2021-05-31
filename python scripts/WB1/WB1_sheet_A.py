@@ -50,7 +50,6 @@ for i in range(len(rowys)):
             zcords.append(k)
 
 
-
 xcords = [-round(entry, 2) for entry in xcords]
 ycords = [round(entry, 2) for entry in ycords]
 zcords = [round(entry, 2) for entry in zcords]
