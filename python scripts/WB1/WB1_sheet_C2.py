@@ -11,9 +11,9 @@ nstringers = 3
 rivet_spacing1 = 50
 top_spacing = 10.8
 side_spacing = 50
-rowspacing = 75.68
+rowspacing = 189.2
 
-rivetsperrow1 = [29, 29, 28, 27, 26, 24]
+rivetsperrow1 = [25, 27, 28]
 
 xcords, ycords, zcords = [], [], []
 
@@ -26,18 +26,20 @@ for i in range(nstringers):
 
 # rib holes
 rivetsperrow2 = 6
-top_spacing = 33.64
-rowys = [230.0, 420.0, 730.0, 1020.0]
+top_spacing = 48.6
+rowys = [230.0, 420.0, 1020.0]
 spacing = 0.0
-for i in range(4):
+for i in range(len(rowys)):
     spacing = 0.0
     for j in range(rivetsperrow2):
         if j == 0:
             spacing += top_spacing
-        elif j % 2 != 0:
-            spacing += 30
-        elif j % 2 == 0:
-            spacing += 45.7
+        elif j == 3:
+            spacing += 102.8
+        elif j == 1 or j == 4:
+            spacing += 50
+        elif j == 2 or j == 5:
+            spacing += 50
         for k in zlevels:
             xcords.append(spacing)
             ycords.append(rowys[i])
@@ -54,4 +56,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_sheet_C1.csv", header=False, index=False)
+frame.to_csv("WB1_sheet_C2.csv", header=False, index=False)

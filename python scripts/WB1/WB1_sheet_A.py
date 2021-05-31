@@ -7,13 +7,13 @@ pd.set_option('display.max_colwidth', None)
 
 zlevels = [50, -0.5, 50]
 # stringer holes
-nstringers = 6
+nstringers = 2
 rivet_spacing1 = 50
-top_spacing = 10.8
+top_spacing = 10
 side_spacing = 50
-rowspacing = 75.68
+rowspacing = 128.4
 
-rivetsperrow1 = [29, 29, 28, 27, 26, 24]
+rivetsperrow1 = [29, 29]
 
 xcords, ycords, zcords = [], [], []
 
@@ -23,25 +23,29 @@ for i in range(nstringers):
             ycords.append(float(side_spacing+j*rivet_spacing1))
             xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
+            if j == 5 or j == 12:
+                ycords.append(float(side_spacing+j*rivet_spacing1))
+                xcords.append(74.2)
+                zcords.append(k)
+
 
 # rib holes
-rivetsperrow2 = 10
-top_spacing = 33.64
-rowys = [230.0, 420.0, 730.0, 1020.0]
+rivetsperrow2 = 6
+top_spacing = 36
+rowys = [230.0, 420., 1020.]
 spacing = 0.0
 for i in range(len(rowys)):
     spacing = 0.0
     for j in range(rivetsperrow2):
         if j == 0:
             spacing += top_spacing
-        elif j % 2 != 0:
-            spacing += 30
-        elif j % 2 == 0:
-            spacing += 45.7
+        elif j == 1 or j == 2:
+            spacing += 38.2
         for k in zlevels:
             xcords.append(spacing)
             ycords.append(rowys[i])
             zcords.append(k)
+
 
 
 xcords = [-round(entry, 2) for entry in xcords]
@@ -54,4 +58,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_sheet_C1.csv", header=False, index=False)
+frame.to_csv("WB1_sheet_A.csv", header=False, index=False)
