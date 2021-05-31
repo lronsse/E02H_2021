@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 outboard = pd.read_excel(r'dataset.xlsx', sheet_name='OUTBOARD')
 loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 outboard = outboard[outboard.columns[:11]]
-outboard = outboard[:49]
+outboard = outboard[:50]
 # print(outboard)
 
 load = -loaddis["LOADCELL"]
@@ -18,7 +18,7 @@ print(topgauges)
 fig, ax = plt.subplots(2, 2)
 a = 0
 for i in range(2, 9, 2):
-    print(i)
+    # print(i)
     ax[0, 0].plot(load, topgauges[f"SG {i}"], label=f"Sensor {i}")
 ax[0, 0].set_title("Top sheet of outboard wingbox")
 ax[0, 0].set_ylabel("Strain")
@@ -26,7 +26,7 @@ ax[0, 0].set_xlabel("Load [N]")
 ax[0, 0].legend()
 
 for i in range(1, 9, 2):
-    print(i)
+    # print(i)
     ax[1, 0].plot(load, bottomgauges[f"SG {i}"], label=f"Sensor {i}")
 ax[1, 0].set_title("Bottom sheet of outboard wingbox")
 ax[1, 0].set_ylabel("Strain")
