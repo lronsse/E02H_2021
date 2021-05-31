@@ -23,6 +23,9 @@ for i in range(nstringers):
             ycords.append(float(side_spacing+j*rivet_spacing1))
             xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
+for i in range(nstringers):
+    for j in range(rivetsperrow1[i]):
+        for k in zlevels:
             if j == 5 or j == 12:
                 ycords.append(float(side_spacing+j*rivet_spacing1))
                 xcords.append(74.2)
@@ -45,7 +48,6 @@ for i in range(len(rowys)):
             xcords.append(spacing)
             ycords.append(rowys[i])
             zcords.append(k)
-
 
 
 xcords = [-round(entry, 2) for entry in xcords]
