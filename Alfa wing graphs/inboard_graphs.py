@@ -4,20 +4,23 @@ import matplotlib.pyplot as plt
 inboard = pd.read_excel(r'dataset.xlsx', sheet_name='INBOARD')
 loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 inboard = inboard[inboard.columns[:11]]
-inboard = inboard[:49]
+inboard = inboard[:50]
 # print(inboard)
 
 load = -loaddis["LOADCELL"]
 print(load)
 topgauges = inboard[inboard.columns[1::2]]
 bottomgauges = inboard[inboard.columns[::2]]
-print(topgauges)
-# print(bottomgauges)
-
+'''
+print(bottomgauges)
+for column in bottomgauges:
+    bottomgauges[column] = bottomgauges[column]-bottomgauges.iloc[column, 1]
+print(bottomgauges)
+'''
 fig, ax = plt.subplots(2, 2)
 a = 0
 for i in range(2, 9, 2):
-    print(i)
+    # print(i)
     ax[0, 0].plot(load, topgauges[f"SG {i}"], label=f"Sensor {i}")
 ax[0, 0].set_title("Top sheet of inboard wingbox")
 ax[0, 0].set_ylabel("Strain")
@@ -25,7 +28,7 @@ ax[0, 0].set_xlabel("Load [N]")
 ax[0, 0].legend()
 
 for i in range(1, 9, 2):
-    print(i)
+    # print(i)
     ax[1, 0].plot(load, bottomgauges[f"SG {i}"], label=f"Sensor {i}")
 ax[1, 0].set_title("Bottom sheet of inboard wingbox")
 ax[1, 0].set_ylabel("Strain")
