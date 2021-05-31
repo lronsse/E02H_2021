@@ -10,13 +10,13 @@ zlevels = [50, -0.5, 50]
 nstringers = 4
 rivet_spacing1 = 50
 top_spacing = 10.8
-y_spacing = [300,226.53,163.47,100]
-rowspacing = 75.68
+y_spacing = [300, 226.53, 163.47, 100]
+rowspacing = 126.14
 
 rivetsperrow1 = [23, 23, 23, 23, 23, 23]
 
 xcords, ycords, zcords = [], [], []
-rowxs=[]
+rowxs = []
 
 for i in range(nstringers):
     for j in range(rivetsperrow1[i]):
