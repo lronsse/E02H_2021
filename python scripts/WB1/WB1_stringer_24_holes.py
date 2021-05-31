@@ -13,7 +13,7 @@ top_spacing = 10
 side_spacing = 50
 rowspacing = 75.68
 
-rivetsperrow1 = [24, 29, 28, 27, 26, 24]
+rivetsperrow1 = [24]
 
 xcords, ycords, zcords = [], [], []
 
@@ -30,4 +30,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_Stringer_B1.csv", header=False, index=False)
+frame.to_csv("WB1_stringer_24_holes.csv", header=False, index=False)
