@@ -23,17 +23,17 @@ for i in range(nstringers):
             ycords.append(float(side_spacing+j*rivet_spacing1))
             xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
-for i in range(nstringers):
-    for j in range(rivetsperrow1[i]):
-        for k in zlevels:
-            if j == 5 or j == 12:
-                ycords.append(float(side_spacing+j*rivet_spacing1))
-                xcords.append(74.2)
-                zcords.append(k)
+
+for j in range(rivetsperrow1[i]):
+    for k in zlevels:
+        if j == 5 or j == 12:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(74.2)
+            zcords.append(k)
 
 
 # rib holes
-rivetsperrow2 = 6
+rivetsperrow2 = 3
 top_spacing = 36
 rowys = [230.0, 420., 1020.]
 spacing = 0.0
@@ -60,4 +60,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_sheet_A.csv", header=False, index=False)
+frame.to_csv("WB1_sheet_A_path.csv", header=False, index=False)
