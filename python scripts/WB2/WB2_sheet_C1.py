@@ -13,7 +13,7 @@ top_spacing = 10.8
 y_spacing = [300, 226.53, 163.47, 100]
 rowspacing = 126.14
 
-rivetsperrow1 = [23, 23, 23, 23, 23, 23]
+rivetsperrow1 = [24, 24, 24, 24, 24, 24]
 
 xcords, ycords, zcords = [], [], []
 rowxs = []

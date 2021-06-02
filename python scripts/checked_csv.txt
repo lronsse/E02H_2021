@@ -2,3 +2,8 @@ WB1_sheet_C1.csv -- checked
 WB1_sheet_C2.csv -- checked
 WB1_sheet_A.csv -- checked
 WB1_sheet_B.csv -- checked
+WB1_vertical_stiffener_D.csv -- checked
+
+WB2
+WB2_sheet_C1.csv -- checked
+WB2_sheet_C2.csv
