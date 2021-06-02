@@ -30,4 +30,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_stringer_24_holes.csv", header=False, index=False)
+frame.to_csv("stringer_B1_B2(24h).csv", header=False, index=False)
