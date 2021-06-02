@@ -12,7 +12,7 @@ xcords, ycords, zcords = [], [], []
 # top row
 rivetsperrow = 10
 top_spacing = 10
-side_spacing = 8.13
+side_spacing = 53.8
 spacing = 0.0
 for j in range(rivetsperrow):
     if j == 0:
