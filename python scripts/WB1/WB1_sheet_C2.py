@@ -13,7 +13,7 @@ top_spacing = 10.8
 side_spacing = 50
 rowspacing = 189.2
 
-rivetsperrow1 = [25, 27, 28]
+rivetsperrow1 = [26, 28, 29]
 
 xcords, ycords, zcords = [], [], []
 
