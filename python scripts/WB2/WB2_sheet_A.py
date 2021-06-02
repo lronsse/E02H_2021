@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -14,7 +13,7 @@ top_spacing = 10
 side_spacing = 50
 rowspacing = 128.4
 
-rivetsperrow1 = [25, 25]
+rivetsperrow1 = [29, 29]
 
 xcords, ycords, zcords = [], [], []
 
@@ -25,19 +24,10 @@ for i in range(nstringers):
             xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
 
-for i in range(nstringers):
-    for j in range(rivetsperrow1[i]):
-        for k in zlevels:
-            if j == 5 or j == 12:
-                ycords.append(float(side_spacing+j*rivet_spacing1))
-                xcords.append(74.2)
-                zcords.append(k)
-
-
 # rib holes
-rivetsperrow2 = 6
+rivetsperrow2 = 3
 top_spacing = 36
-rowys = [230.0, 420.0, 1020.0]
+rowys = [1150]
 spacing = 0.0
 for i in range(len(rowys)):
     spacing = 0.0
@@ -51,17 +41,14 @@ for i in range(len(rowys)):
             ycords.append(rowys[i])
             zcords.append(k)
 
-
-
 xcords = [-round(entry, 2) for entry in xcords]
 ycords = [round(entry, 2) for entry in ycords]
 zcords = [round(entry, 2) for entry in zcords]
 
-print(os.path.basename(__file__))
 # printing and csv output
 data = {"xcords": xcords, "ycords": ycords, "zcords": zcords}
 frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("WB1_sheet_B.csv", header=False, index=False)
+frame.to_csv("WB2_sheet_A.csv", header=False, index=False)
