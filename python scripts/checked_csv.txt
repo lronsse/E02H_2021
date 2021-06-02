@@ -6,4 +6,6 @@ WB1_vertical_stiffener_D.csv -- checked
 
 WB2
 WB2_sheet_C1.csv -- checked
-WB2_sheet_C2.csv
+WB2_sheet_C2.csv -- checked
+WB2_sheet_A.csv -- checked
+WB2_sheet_B.csv -- checked
