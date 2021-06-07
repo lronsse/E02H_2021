@@ -4,7 +4,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', None)
-CornerCords = [440, 645, 880, 950, 1020, 1090, 1160, 1230, 1300, 1370, 1440, 1510, 1580, 1650]
+CornerCords = [440, 645, 880, 950, 1020, 1090, 1160, 1230, 1300, 1370, 1440, 1510]
 #WB1_sheet_C2
 
 zlevels = [50, -0.5, 50]
@@ -288,48 +288,11 @@ for i in range(nstringers):
             ycords.append(float(side_spacing+j*rivet_spacing1))
             xcords.append(top_spacing+i*75.68)
             zcords.append(k)
-#Stringer WB2 B3
-# stringer holes
-nstringers = 1
-rivet_spacing1 = 50
-top_spacing = 10 + CornerCords[11]
-side_spacing = 50
-rowspacing = 75.68
-
-rivetsperrow1 = [24]
-
-
-for i in range(nstringers):
-    for j in range(rivetsperrow1[i]):
-        for k in zlevels:
-            ycords.append(float(side_spacing+j*rivet_spacing1))
-            xcords.append(top_spacing+i*75.68)
-            zcords.append(k)
-
-#Stringer #Stringer WB2 B4
-
-# stringer holes
-nstringers = 1
-rivet_spacing1 = 50
-top_spacing = 10 + CornerCords[12]
-side_spacing = 50
-rowspacing = 75.68
-
-rivetsperrow1 = [24]
-
-
-for i in range(nstringers):
-    for j in range(rivetsperrow1[i]):
-        for k in zlevels:
-            ycords.append(float(side_spacing+j*rivet_spacing1))
-            xcords.append(top_spacing+i*75.68)
-            zcords.append(k)
-
 
 #Rib 1.3 Wb1
 # top row
 rivetsperrow = 10
-top_spacing = 10 + CornerCords[13]
+top_spacing = 10 + CornerCords[11]
 side_spacing = 53.8
 spacing = 0.0
 for j in range(rivetsperrow):
@@ -345,7 +308,7 @@ for j in range(rivetsperrow):
         zcords.append(k)
 # bottom row
 rivetsperrow = 6
-top_spacing = 180.15 + CornerCords[13]
+top_spacing = 180.15 + CornerCords[11]
 side_spacing = 8.13
 ys = [68.53, 118.53, 168.53, 271.33, 321.33, 371.33]
 for j in range(rivetsperrow):
@@ -357,7 +320,7 @@ for j in range(rivetsperrow):
 # side rows
 rivetsperrow = 3
 rivet_spacing = 38.2
-top_spacing = 56.88 + CornerCords[13]
+top_spacing = 56.88 + CornerCords[11]
 side_spacing = 10
 ys = [10, 430]
 for i in ys:
@@ -370,7 +333,7 @@ for i in ys:
 #Rib 2.1 Wb2
 # top row
 rivetsperrow = 6
-top_spacing = 10 + CornerCords[13]
+top_spacing = 10 + CornerCords[11]
 side_spacing = 68.525 + 753
 spacing = 0.0
 ys = [68.53, 123.8633, 194.663, 249.996, 320.796, 376.129]
@@ -382,7 +345,7 @@ for j in range(rivetsperrow):
 
 # bottom row
 rivetsperrow = 7
-top_spacing = 180.15 + CornerCords[13]
+top_spacing = 180.15 + CornerCords[11]
 side_spacing = 8.13
 ys = [71.475]
 for j in range(rivetsperrow):
@@ -394,7 +357,7 @@ for j in range(rivetsperrow):
 # side rows
 rivetsperrow = 3
 rivet_spacing = 38.2
-top_spacing = 56.88 + CornerCords[13]
+top_spacing = 56.88 + CornerCords[11]
 side_spacing = 10
 ys = [10, 430]
 for i in ys:
@@ -416,4 +379,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("Config_3.csv", header=False, index=False)
+frame.to_csv("Config_2.csv", header=False, index=False)
