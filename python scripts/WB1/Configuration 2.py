@@ -15,7 +15,7 @@ top_spacing = 10.8
 side_spacing = 50
 rowspacing = 189.2
 
-rivetsperrow1 = [26, 28, 29]
+rivetsperrow1 = [29, 28, 26]
 
 xcords, ycords, zcords = [], [], []
 
@@ -416,4 +416,4 @@ frame = pd.DataFrame(data)
 frame["i"] = 0
 frame["j"] = 0
 frame["k"] = -1
-frame.to_csv("Config_2.csv", header=False, index=False)
+frame.to_csv("Config_3.csv", header=False, index=False)
