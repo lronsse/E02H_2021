@@ -5,13 +5,16 @@ loaddis = pd.read_excel(r'dataset.xlsx', sheet_name='LOAD & DISPLACEMENT')
 outboard = pd.read_excel(r'dataset.xlsx', sheet_name='OUTBOARD')
 data = loaddis["LOADCELL"]
 print(data)
+loaddis = loaddis[:50]
 
 outboard = outboard[outboard.columns[10:12]]
+outboard = outboard[:50]
 print(outboard)
 
 xdata1 = outboard["SLEEVE TOP"]
+xdata1 = xdata1[:50]
 xdata2 = outboard["SLEEVE BOTTOM"]
-ydata = -data
+ydata = -data[:50]
 
 fig = plt.figure()
 ax = plt.axes()

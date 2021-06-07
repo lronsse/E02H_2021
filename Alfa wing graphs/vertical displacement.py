@@ -12,12 +12,12 @@ ydata = -data["LOADCELL"]
 fig = plt.figure()
 ax = plt.axes()
 
-ax.plot(ydata, xdata1, label="Sensor 1")
-ax.plot(ydata, xdata2, label="Sensor 2")
+ax.plot(xdata1, ydata, label="Sensor 1")
+ax.plot(xdata2, ydata, label="Sensor 2")
 plt.legend()
 # axs[0].set_title("Displacement 1 vs loadcell")
-ax.set_ylabel("Displacement [mm]")
-ax.set_xlabel("Load [N]")
+ax.set_xlabel("Displacement [mm]")
+ax.set_ylabel("Load [N]")
 
 """
 axs[1].plot(xdata2, ydata)
