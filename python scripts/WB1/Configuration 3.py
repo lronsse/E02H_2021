@@ -170,6 +170,70 @@ for i in range(nstringers):
             ycords.append(float(side_spacing+j*rivet_spacing1))
             xcords.append(top_spacing+i*75.68)
             zcords.append(k)
+#B1
+nstringers = 1
+rivet_spacing1 = 50
+top_spacing = 10 + CornerCords[6]
+side_spacing = 50
+rowspacing = 75.68
+
+rivetsperrow1 = [24]
+
+
+for i in range(nstringers):
+    for j in range(rivetsperrow1[i]):
+        for k in zlevels:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(top_spacing+i*75.68)
+            zcords.append(k)
+#B2
+nstringers = 1
+rivet_spacing1 = 50
+top_spacing = 10 + CornerCords[7]
+side_spacing = 50
+rowspacing = 75.68
+
+rivetsperrow1 = [24]
+
+
+for i in range(nstringers):
+    for j in range(rivetsperrow1[i]):
+        for k in zlevels:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(top_spacing+i*75.68)
+            zcords.append(k)
+#B4
+nstringers = 1
+rivet_spacing1 = 50
+top_spacing = 10 + CornerCords[8]
+side_spacing = 50
+rowspacing = 75.68
+
+rivetsperrow1 = [24]
+
+
+for i in range(nstringers):
+    for j in range(rivetsperrow1[i]):
+        for k in zlevels:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(top_spacing+i*75.68)
+            zcords.append(k)
+#B1
+nstringers = 1
+rivet_spacing1 = 50
+top_spacing = 10 + CornerCords[9]
+side_spacing = 50
+rowspacing = 75.68
+
+rivetsperrow1 = [24]
+
+
+for i in range(nstringers):
+    for j in range(rivetsperrow1[i]):
+        for k in zlevels:
+            ycords.append(float(side_spacing+j*rivet_spacing1))
+            xcords.append(top_spacing+i*75.68)
+            zcords.append(k)
 
 xcords = [-round(entry, 2) for entry in xcords]
 ycords = [round(entry, 2) for entry in ycords]
