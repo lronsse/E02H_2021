@@ -67,12 +67,7 @@ for i in range(nstringers):
             xcords.append(top_spacing+i*rowspacing)
             zcords.append(k)
 
-for j in range(rivetsperrow1[i]):
-    for k in zlevels:
-        if j == 5 or j == 12:
-            ycords.append(float(side_spacing+j*rivet_spacing1))
-            xcords.append(74.2 + CornerCords[0])
-            zcords.append(k)
+
 
 
 # rib holes

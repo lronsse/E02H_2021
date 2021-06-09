@@ -76,7 +76,7 @@ for j in range(rivetsperrow1[i]):
 # rib holes
 rivetsperrow2 = 3
 top_spacing = 36 + CornerCords[0]
-rowys = [230.0, 420., 1020.]
+rowys = [230.0]
 spacing = 0.0
 for i in range(len(rowys)):
     spacing = 0.0
